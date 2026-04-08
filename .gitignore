@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -39,3 +37,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# temp files
+eslint_errors.txt
+ts_errors.txt
+url.txt
+geturl.js
+.gemini/
+.agents/
+_agents/
+.agent/
+_agent/
+
+
