@@ -56,21 +56,41 @@ export const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-5 relative flex justify-center group"
+            className="lg:col-span-5 flex flex-col items-center gap-8"
           >
-            <div className="relative w-[300px] h-[400px] rounded-2xl overflow-hidden glass z-10 transition-transform duration-500 group-hover:scale-[1.02]">
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
-              {/* User Profile Image */}
-              <div className="w-full h-full bg-primary/10 flex flex-col justify-end p-6 z-20 relative">
-                <div className="w-full h-full absolute inset-0 bg-[url('/profile.png')] bg-cover bg-top group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#030014] to-transparent z-10" />
-                <h3 className="text-2xl font-bold relative z-20 shadow-black drop-shadow-md">ROHIT</h3>
-                <p className="text-accent text-sm font-medium relative z-20">Engineer & Creator</p>
+            <div className="relative group">
+              <div className="relative w-[300px] h-[400px] rounded-2xl overflow-hidden glass z-10 transition-transform duration-500 group-hover:scale-[1.02]">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
+                {/* User Profile Image */}
+                <div className="w-full h-full bg-primary/10 flex flex-col justify-end p-6 z-20 relative">
+                  <div className="w-full h-full absolute inset-0 bg-[url('/profile.png')] bg-cover bg-top group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#030014] to-transparent z-10" />
+                  <h3 className="text-2xl font-bold relative z-20 shadow-black drop-shadow-md">ROHIT</h3>
+                  <p className="text-accent text-sm font-medium relative z-20">Engineer & Creator</p>
+                </div>
               </div>
+              
+              {/* Decorative background blur */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[420px] bg-accent/20 rounded-2xl blur-[40px] -z-10 transition-opacity duration-500 group-hover:opacity-100 opacity-50" />
             </div>
             
-            {/* Decorative background blur */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[420px] bg-accent/20 rounded-2xl blur-[40px] -z-10 transition-opacity duration-500 group-hover:opacity-100 opacity-50" />
+            {/* Resume Download Button */}
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="w-full flex justify-center"
+            >
+              <a 
+                href="/resume.html" 
+                download="Rohit_Resume.html"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-accent/10 border border-accent/30 text-accent font-semibold hover:bg-accent hover:text-background transition-all duration-300 shadow-[0_0_20px_rgba(0,240,255,0.1)] hover:shadow-[0_0_30px_rgba(0,240,255,0.4)] group"
+              >
+                <ScrollText className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                Download Resume
+              </a>
+            </motion.div>
           </motion.div>
 
           {/* Content Column */}
