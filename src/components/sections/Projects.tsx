@@ -50,8 +50,8 @@ const projectsData: ProjectType[] = [
     ],
     colSpan: 1,
     rowSpan: 2,
-    githubUrl: "https://github.com/mrrohit333/GameBooster",
-    apkUrl: "#",
+    githubUrl: "https://github.com/mrrohit333/gamebooster",
+    apkUrl: "/gamebooster.apk",
     image: "/projects/gamebooster.png"
   },
   {
@@ -199,7 +199,7 @@ export const Projects = () => {
                         </a>
                       )}
                       {project.apkUrl && (
-                        <a href={project.apkUrl} className="flex-1" target="_blank" rel="noopener noreferrer">
+                        <a href={project.apkUrl} download className="flex-1" target="_blank" rel="noopener noreferrer">
                           <button className="w-full py-2.5 rounded-xl bg-purple-500/20 text-purple-300 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-purple-500/40 transition-colors border border-purple-500/30">
                             <Smartphone className="w-4 h-4" /> APK
                           </button>
